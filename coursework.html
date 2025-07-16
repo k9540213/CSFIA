@@ -1,0 +1,97 @@
+<!-- =============================================================== -->
+<!-- coursework.html                                                 -->
+<!-- =============================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursework | Michael Kuo's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Michael Kuo's Portfolio</div>
+            <nav id="nav-menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="resume.html" class="text-gray-600 hover:text-gray-900">Resume</a>
+                <a href="coursework.html" class="text-gray-900 font-bold border-b-2 border-blue-600">Coursework</a>
+                <a href="projects.html" class="text-gray-600 hover:text-gray-900">Projects</a>
+                <a href="blog.html" class="text-gray-600 hover:text-gray-900">Blog</a>
+            </nav>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-4xl font-bold text-center mb-12">Relevant Coursework</h1>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Course 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">CS 3350: Software Engineering</h2>
+                <p class="text-gray-700">Studied software development lifecycle models, requirements engineering, and testing methodologies. Gained practical experience in team collaboration and project management using Agile principles, culminating in the development of a full-stack application.</p>
+            </div>
+            <!-- Course 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">CS 3410: Data Structures</h2>
+                <p class="text-gray-700">In-depth study of fundamental data structures including arrays, linked lists, trees, and graphs. Focused on understanding the time and space complexity trade-offs and implementing these structures from scratch in Java.</p>
+            </div>
+            <!-- Course 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">CS 4310: Design and Analysis of Algorithms</h2>
+                <p class="text-gray-700">Covered algorithm design paradigms such as divide-and-conquer, dynamic programming, and greedy algorithms. Analyzed algorithm complexity and performance, with a focus on sorting algorithms and graph traversal (e.g., Dijkstra's algorithm).</p>
+            </div>
+            <!-- Course 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-2">CS 4710: Database Systems</h2>
+                <p class="text-gray-700">Learned principles of database design, the relational model, and advanced SQL. The course project involved designing a normalized relational database (to 3NF) and writing optimized queries for a sample e-commerce application.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+             <div class="mb-4">
+                <a href="www.linkedin.com/in/k9530213" class="text-blue-400 hover:underline">LinkedIn Profile</a>
+            </div>
+            <p>&copy; 2025 Michael Kuo | All Rights Reserved</p>
+        </div>
+    </footer>
+     <script>
+        (function() {
+            if (window.mobileMenuInitialized) {
+                return;
+            }
+            const allMenuButtons = document.querySelectorAll('#mobile-menu-button');
+            allMenuButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const header = button.closest('header');
+                    if (header) {
+                        const navMenu = header.querySelector('#nav-menu');
+                        if (navMenu) {
+                            navMenu.classList.toggle('hidden');
+                        }
+                    }
+                });
+            });
+            window.mobileMenuInitialized = true;
+        })();
+    </script>
+</body>
+</html>

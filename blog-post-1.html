@@ -1,0 +1,90 @@
+<!-- =============================================================== -->
+<!-- blog-post-1.html (Example of a single blog post page)           -->
+<!-- =============================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAAP Test Showdown | Michael Kuo's Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Michael Kuo's Portfolio</div>
+            <nav id="nav-menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="resume.html" class="text-gray-600 hover:text-gray-900">Resume</a>
+                <a href="coursework.html" class="text-gray-600 hover:text-gray-900">Coursework</a>
+                <a href="projects.html" class="text-gray-600 hover:text-gray-900">Projects</a>
+                <a href="blog.html" class="text-gray-900 font-bold border-b-2 border-blue-600">Blog</a>
+            </nav>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold mb-4">Can You Trust What You Read Online? A CRAAP Test Showdown</h1>
+            <p class="text-gray-500 mb-8">Posted on June 23, 2025</p>
+
+            <div class="prose lg:prose-xl max-w-none">
+                <p>This week in my Information Literacy class, we're getting into the most important skill of all: figuring out if what you're reading online is actually reliable. It's easy to find <em>information</em>, but how do you know if it's <em>good</em> information?</p>
+                <p>The tool my professor wants us to use is called the <strong>CRAAP test</strong>. And despite the funny name, it’s a surprisingly solid framework. It’s an acronym that stands for Currency, Relevance, Authority, Accuracy, and Purpose.</p>
+                <p>To put it to the test, I took two websites from a previous search on the cognitive benefits of bilingualism and put them head-to-head.</p>
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic my-8">
+                    "The CRAAP test gives you a simple but effective checklist to make sure you're not citing a slick advertisement in the middle of your research paper."
+                </blockquote>
+                <p>The first site was from the Dana Foundation, a non-profit focused on brain research. The second was from a commercial translation company. While the company's article was more recent, the Dana Foundation's article was written by Ph.D.s and cited actual research, making it far more authoritative and accurate. The purpose was clear: one was to inform, the other was to sell. It was a perfect illustration of why you always have to ask 'why' a piece of information exists.</p>
+            </div>
+            <a href="blog.html" class="inline-block mt-12 text-blue-600 hover:underline">&larr; Back to Blog</a>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+             <div class="mb-4">
+                <a href="www.linkedin.com/in/k9530213" class="text-blue-400 hover:underline">LinkedIn Profile</a>
+            </div>
+            <p>&copy; 2025 Michael Kuo | All Rights Reserved</p>
+        </div>
+    </footer>
+     <script>
+        (function() {
+            if (window.mobileMenuInitialized) {
+                return;
+            }
+            const allMenuButtons = document.querySelectorAll('#mobile-menu-button');
+            allMenuButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const header = button.closest('header');
+                    if (header) {
+                        const navMenu = header.querySelector('#nav-menu');
+                        if (navMenu) {
+                            navMenu.classList.toggle('hidden');
+                        }
+                    }
+                });
+            });
+            window.mobileMenuInitialized = true;
+        })();
+    </script>
+</body>
+</html>
+

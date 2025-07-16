@@ -1,0 +1,116 @@
+<!-- =============================================================== -->
+<!-- index.html (Homepage)                                           -->
+<!-- =============================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Kuo | Computer Science Student Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Michael Kuo's Portfolio</div>
+            <nav id="nav-menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-900 font-bold border-b-2 border-blue-600">Home</a>
+                <a href="resume.html" class="text-gray-600 hover:text-gray-900">Resume</a>
+                <a href="coursework.html" class="text-gray-600 hover:text-gray-900">Coursework</a>
+                <a href="projects.html" class="text-gray-600 hover:text-gray-900">Projects</a>
+                <a href="blog.html" class="text-gray-600 hover:text-gray-900">Blog</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-blue-600 text-white">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <img src="https://placehold.co/150x150/ffffff/3B82F6?text=MK" alt="Portrait of Michael Kuo" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white">
+                <h1 class="text-5xl font-bold mb-2">Michael Kuo</h1>
+                <p class="text-xl text-blue-200">Computer Science Student | Software Developer | Problem Solver</p>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Welcome</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                    Hello! I'm a Computer Science student at Georgia State University with a passion for building elegant software solutions. This website is a portfolio of my academic accomplishments, development projects, and thoughts on the world of technology.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="resume.html" class="block bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">My Resume</h3>
+                        <p class="text-gray-700">View my professional experience, skills, and education.</p>
+                    </a>
+                    <a href="coursework.html" class="block bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">Coursework</h3>
+                        <p class="text-gray-700">Explore the key courses that have shaped my academic journey.</p>
+                    </a>
+                    <a href="projects.html" class="block bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">Projects</h3>
+                        <p class="text-gray-700">See a detailed showcase of my academic and personal projects.</p>
+                    </a>
+                    <a href="blog.html" class="block bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">My Blog</h3>
+                        <p class="text-gray-700">Read my thoughts on being a technology-enhanced student.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="https://www.linkedin.com/in/k9530213" class="text-blue-400 hover:underline">LinkedIn Profile</a>
+            </div>
+            <p>&copy; 2025 Michael Kuo | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            if (window.mobileMenuInitialized) {
+                return;
+            }
+            const allMenuButtons = document.querySelectorAll('#mobile-menu-button');
+            allMenuButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const header = button.closest('header');
+                    if (header) {
+                        const navMenu = header.querySelector('#nav-menu');
+                        if (navMenu) {
+                            navMenu.classList.toggle('hidden');
+                        }
+                    }
+                });
+            });
+            window.mobileMenuInitialized = true;
+        })();
+    </script>
+</body>
+</html>
